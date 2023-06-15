@@ -200,7 +200,7 @@ class Camera_rps():
         start_time = int(time.time())
         print(f"user score: {self.user_wins}\ncomputer score: {self.computer_wins}")
 
-        while True:
+        while self.user_wins<self.default_rounds and self.computer_wins<self.default_rounds:
             # Capture a frame of video
             ret, frame = cap.read()
 
@@ -239,8 +239,7 @@ class Camera_rps():
             else:captured = False
             # Display the modified video with the countdown timer
             cv2.imshow("Frame", frame)
-            if self.user_wins>=self.default_rounds and self.computer_wins>=self.default_rounds:
-                break
+
             # Wait for 1 millisecond and check if the 'q' key was pressed
             if cv2.waitKey(1) == ord('q'):
                 break

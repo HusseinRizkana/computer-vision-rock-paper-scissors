@@ -1,18 +1,63 @@
 import random 
 def get_user_choice_numerical():
+    '''
+    get user choice by inputing 1, 2 or 3 (fixes issues with user spelling errors)
+    returns:
+    -----------
+    str
+        either "Rock", "Paper", "Scissors" 
+    '''
     choices = ["Rock","Paper", "Scissors"]
 
     user_input = input("please pick a an option by inputting the number and pressing enter:\n1) rock \n2) paper \n3) scissors\n")
     return choices[int(user_input)-1]
+
 def get_user_choice():
+    '''
+    get user choice by inputing 1, 2 or 3 (fixes issues with user spelling errors)
+    returns:
+    -----------
+    str
+        either "Rock", "Paper", "Scissors" 
+    '''
     choices = ["Rock","Paper", "Scissors"]
-    return input("please input your choice from Rock, Paper, Scissors")
+    user_input = input("please input your choice from Rock, Paper, Scissors")
+    assert(user_input in choices)
+    return user_input
+
 def get_computer_choice():
+    '''
+    get computer randomly assigned choice
+    returns:
+    -----------
+    str
+        either "Rock", "Paper", "Scissors" 
+    '''
     choices = ["Rock", "Paper", "Scissors"]
 
     return random.choice(choices)
+
 def get_winner(computer_choice,user_choice):
-    # 0 is a user win, 1 is a computer win, 2 is a tie
+    '''
+    returns the winner of the rock paper scissors round based on 
+    human input and computer choice and traditional rock paper scissors
+    rules
+    both printing and returning the winner
+    
+    parameters: 
+    -----------
+        user_choice : str 
+            users choice of "Rock", "Paper" or "Scissors"
+        computer_choice : str 
+            computers choice of "Rock", "Paper", or "Scissors"
+
+    returns:
+    -----------
+        int
+            0 = user won, 1 = computer won, 2 = it was tie  
+
+
+    '''
     if user_choice=="Rock":
         if computer_choice=="Rock": 
             print("It is a tie!")
@@ -43,11 +88,16 @@ def get_winner(computer_choice,user_choice):
         else:
             print("It is a tie!")
             return 2
+
 def play():
+    '''
+    runs one round of the manual rock paper scissors terminal game
+    '''
     user_choice = get_user_choice()
     computer_choice = get_computer_choice()
     print(f"you chose {user_choice}, computer chose {computer_choice}")
     get_winner(user_choice=user_choice,computer_choice=computer_choice)
+
 if __name__=="__main__":
     play()
     
