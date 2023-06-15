@@ -11,7 +11,7 @@ def get_computer_choice():
     choices = ["Rock", "Paper", "Scissors"]
 
     return random.choice(choices)
-def get_winner(user_choice,computer_choice):
+def get_winner(computer_choice,user_choice):
     # 0 is a user win, 1 is a computer win, 2 is a tie
     if user_choice=="Rock":
         if computer_choice=="Rock": 
