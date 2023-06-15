@@ -9,27 +9,37 @@ def get_computer_choice():
 
     return random.choice(choices)
 def get_winner(user_choice,computer_choice):
+    # 0 is a user win, 1 is a computer win, 2 is a tie
     if user_choice=="Rock":
         if computer_choice=="Rock": 
             print("It's a tie!")
+            return 2
         elif computer_choice=="Paper":
             print("You lost")
+            return 1
         else:
             print("You won!")
+            return 0
     elif user_choice=="Paper":
         if computer_choice=="Rock": 
             print("You won!")
+            return 0
         elif computer_choice=="Paper":
             print("It's a tie!")
+            return 2
         else:
             print("You lost")
+            return 1
     else:
         if computer_choice=="Rock": 
             print("You lost")
+            return 1
         elif computer_choice=="Paper":
              print("You won!")
+             return 0
         else:
             print("It's a tie!")
+            return 2
 def play():
     user_choice = get_user_choice()
     computer_choice = get_computer_choice()

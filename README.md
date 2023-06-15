@@ -6,6 +6,9 @@ for creating the model to detect rock paper and scissors with the output being a
 
 - Teachable machines was used for creating the computer vision model that detects rock paper and scissors hand gestures
 this will be used in the continuation of this project in creating the full game
+### Training the model
+- A model was trained using https://teachablemachine.withgoogle.com/ to predict user input of Rock, Paper or Scissors using their conventional hand signs.
+- After training the model was extracted as a keras model and used for predicting user input
 
 ## Milestone 2 
 - Logic was written for basic rock paper scissors following the conventional game rules for a user to play against the computer as a command line game.
@@ -50,3 +53,47 @@ please pick a an option by inputting the number and pressing enter:
 you chose Rock, computer chose Rock
 It's a tie!
 ```
+
+## Milestone 3 
+- The game was adapted to use computer vision instead of the terminal for the user input of rock paper or scissors and encapsulated in a Camera_rps() class
+- This update allows the user to play against the computer using their camera. The first to 3 wins wins.
+
+### How to play the game
+1. clone the github repo by running in the terminal
+```
+git clone https://github.com/HusseinRizkana/computer-vision-rock-paper-scissors.git
+```
+2. install the dependencies
+```
+pip install -r requirements.txt
+```
+3. run the game file to start the game 
+```
+python main.py
+```
+4. Starting the game shows the video stream from the users camera with a countdown timer starting the game and countdown timer.
+![Alt text](demoVideo.gif)
+> The gif above shows an example of how you would play the game
+5. once the countdown reaches 0 your input will be put to the test against the generated rock paper scissors choice of the computer. 
+6. The game repeats until you are or the computer reach the set number of wins to win the game (default = 3 wins)
+
+
+
+### Game Settings
+- Changing maximum number of wins:
+
+    to edit the maximum number of wins to win the game,  the Camera_rps() class attribute  default_rounds can be editted in the main.py file class constructor to however many wins the user would like to play to. 
+    ```
+    if __name__ == "__main__":
+        rps = Camera_rps(default_rounds=5)
+        rps.play()
+    ```
+- Changing countdown timer length: 
+
+    to edit the countdown timer length to player response capture, the Camera_rps() class attribute default_countdown can be editted in the main.py file class constructor to however long the user would like the countdown to be in seconds. 
+
+    ```
+    if __name__ == "__main__":
+        rps = Camera_rps(default_countdown=10)
+        rps.play()
+    ```
