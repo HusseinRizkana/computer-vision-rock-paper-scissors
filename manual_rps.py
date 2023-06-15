@@ -1,11 +1,14 @@
 import random 
-def get_user_choice():
+def get_user_choice_numerical():
     choices = ["Rock","Paper", "Scissors"]
 
     user_input = input("please pick a an option by inputting the number and pressing enter:\n1) rock \n2) paper \n3) scissors\n")
     return choices[int(user_input)-1]
-def get_computer_choice():
+def get_user_choice():
     choices = ["Rock","Paper", "Scissors"]
+    return input("please input your choice from Rock, Paper, Scissors")
+def get_computer_choice():
+    choices = ["Rock", "Paper", "Scissors"]
 
     return random.choice(choices)
 def get_winner(user_choice,computer_choice):
