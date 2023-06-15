@@ -72,7 +72,7 @@ pip install -r requirements.txt
 python main.py
 ```
 4. Starting the game shows the video stream from the users camera with a countdown timer starting the game and countdown timer.
-![Alt text](demoVideo.gif)
+![Alt text](assets/demoVideo.gif)
 > The gif above shows an example of how you would play the game
 5. once the countdown reaches 0 your input will be put to the test against the generated rock paper scissors choice of the computer. 
 6. The game repeats until you are or the computer reach the set number of wins to win the game (default = 3 wins)
