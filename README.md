@@ -56,9 +56,9 @@ It's a tie!
 
 ## Milestone 3 
 - The game was adapted to use computer vision instead of the terminal for the user input of rock paper or scissors and encapsulated in a Camera_rps() class
-- This update allows the user to play against the computer using their camera. The first to 3 wins wins.
+- This update allows the user to play against the computer using their camera. The first to 3 round wins, wins the game.
 
-### How to play the game
+## How to play the game
 1. clone the github repo by running in the terminal
 ```
 git clone https://github.com/HusseinRizkana/computer-vision-rock-paper-scissors.git
@@ -97,3 +97,14 @@ python main.py
         rps = Camera_rps(default_countdown=10)
         rps.play()
     ```
+
+## Future Work
+- Developing a better image recognition model: 
+
+    The current model was built quickly on a sample size of 1. This makes the model mispredict what the user is trying to convey often. A better model can be built using a larger more generalisable dataset so that many more people can play the game to a higher degree of satisfaction.
+- Building a nicer gui:
+    
+    Building a nicer GUI perhaps in an executable form can help reach a wider audience of the less tech savvy individuals and making the game more user friendly.
+- Launching to the appstore: 
+    
+    following the previous point this again would make the use of this application more available to and inclusive of the general public
