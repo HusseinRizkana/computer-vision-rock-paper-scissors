@@ -1,5 +1,5 @@
 # Rock-Paper-Scissors-Repo
-> This is a rockpaper scissors game to be played using computer vision. The tools used are teachablemachines was used
+> This is a rockpaper scissors game to be played using computer vision. The tools used are Teachable Machine was used
 for creating the model to detect rock paper and scissors with the output being a tensorflow keras model.
 
 ## Milestone 1

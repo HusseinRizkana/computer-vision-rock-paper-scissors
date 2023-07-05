@@ -42,7 +42,8 @@ class Camera_rps():
         returns the winner of the rock paper scissors round based on 
         human input and computer choice and traditional rock paper scissors
         rules both printing and returning the winner
-    """    
+    """ 
+
     def __init__(self, default_rounds:int=3, default_countdown:int=5):
         '''
         Constructs all necessary attributes for the computer vision based rock paper scissors object.
@@ -61,8 +62,6 @@ class Camera_rps():
         self.user_wins = 0
         self.model = load_model('keras_model.h5')
         self.data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
-
-    
     
     def get_prediction(self,img):
         '''
@@ -249,9 +248,6 @@ class Camera_rps():
         cap.release()
         cv2.destroyAllWindows()
         
-
-
-
 
 if __name__ == "__main__":
     rps = Camera_rps()

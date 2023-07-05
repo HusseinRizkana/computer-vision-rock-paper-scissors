@@ -1,16 +1,4 @@
 import random 
-def get_user_choice_numerical():
-    '''
-    get user choice by inputing 1, 2 or 3 (fixes issues with user spelling errors)
-    returns:
-    -----------
-    str
-        either "Rock", "Paper", "Scissors" 
-    '''
-    choices = ["Rock","Paper", "Scissors"]
-
-    user_input = input("please pick a an option by inputting the number and pressing enter:\n1) rock \n2) paper \n3) scissors\n")
-    return choices[int(user_input)-1]
 
 def get_user_choice():
     '''
@@ -22,7 +10,7 @@ def get_user_choice():
     '''
     choices = ["Rock","Paper", "Scissors"]
     user_input = input("please input your choice from Rock, Paper, Scissors")
-    assert(user_input in choices)
+    assert(user_input.lower().capitalize() in choices)
     return user_input
 
 def get_computer_choice():
