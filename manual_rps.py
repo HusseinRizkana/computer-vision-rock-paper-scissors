@@ -14,6 +14,7 @@ def get_user_choice():
     assert(user_input.lower().capitalize() in choices)
     return user_input
 
+
 def get_computer_choice():
     '''
     get computer randomly assigned choice
@@ -25,6 +26,7 @@ def get_computer_choice():
     choices = ["Rock", "Paper", "Scissors"]
 
     return random.choice(choices)
+
 
 def get_winner(computer_choice,user_choice):
     '''
@@ -78,6 +80,7 @@ def get_winner(computer_choice,user_choice):
             print("It is a tie!")
             return 2
 
+
 def play():
     '''
     runs one round of the manual rock paper scissors terminal game
@@ -86,6 +89,7 @@ def play():
     computer_choice = get_computer_choice()
     print(f"you chose {user_choice}, computer chose {computer_choice}")
     get_winner(user_choice=user_choice,computer_choice=computer_choice)
+
 
 if __name__=="__main__":
     play()
