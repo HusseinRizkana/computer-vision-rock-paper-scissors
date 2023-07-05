@@ -1,5 +1,6 @@
 import random 
 
+
 def get_user_choice():
     '''
     get user choice by inputing 1, 2 or 3 (fixes issues with user spelling errors)
